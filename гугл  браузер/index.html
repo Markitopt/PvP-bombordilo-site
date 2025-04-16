@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PvP Bombordilo Krokodilo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #1a1a1a;
+      padding: 10px;
+    }
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .ip-box {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .copy-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #0ff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="PvP Logo" style="max-height: 100px;">
+    <h1>PvP Bombordilo Krokodilo</h1>
+  </header>
+  <nav>
+    <a href="#how">Как зайти</a>
+    <a href="#kits">Киты и Дуэли</a>
+    <a href="#leaders">Лидеры</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+  
+  <section id="how">
+    <h2>Как зайти на сервер</h2>
+    <div class="ip-box">
+      <p>IP: <span id="server-ip">play.bombordilo.ru</span></p>
+      <button class="copy-btn" onclick="copyIP()">Скопировать IP</button>
+    </div>
+  </section>
+
+  <section id="kits">
+    <h2>Киты, Дуэли и Арены</h2>
+    <p>На сервере доступны режимы 1v1 и 2v2. Быстрые дуэли, авто-респаун, киты для PvP и разные арены ждут тебя!</p>
+  </section>
+
+  <section id="leaders">
+    <h2>Таблица лидеров</h2>
+    <p>Скоро здесь появится топ PvP-игроков сервера!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Присоединяйся к нашему Discord-сообществу: <a href="https://discord.gg/your-link" target="_blank">discord.gg/your-link</a></p>
+  </section>
+
+  <script>
+    function copyIP() {
+      const ip = document.getElementById('server-ip').innerText;
+      navigator.clipboard.writeText(ip).then(() => {
+        alert('IP скопирован: ' + ip);
+      });
+    }
+  </script>
+</body>
+</html>
